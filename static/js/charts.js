@@ -4,6 +4,8 @@ function init() {
 
   // Use the list of sample names to populate the select options
   d3.json("samples.json").then((data) => {
+    console.log(data);
+
     var sampleNames = data.names;
 
     sampleNames.forEach((sample) => {
@@ -53,7 +55,7 @@ function buildMetadata(sample) {
   });
 }
 
-// 1. Create the buildCharts function.
+// 1. Create the buildCharts function.https://iprudhomme.github.io/plotly_deployment/
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
@@ -88,6 +90,6 @@ function buildCharts(sample) {
      title: "Test"
     };
     // 10. Use Plotly to plot the data with the layout. 
-    
+    Plotly.newPlot("plot",barData,barLayout);
   });
 }
