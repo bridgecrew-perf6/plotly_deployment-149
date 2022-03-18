@@ -105,7 +105,7 @@ function buildCharts(sample) {
       x: otu_ids,
       y: sample_values,
       hovertemplate: '(%{y},%{x})<br>' +
-      '<b>%{text}</b>',    
+      '<b>%{text}</b><extra></extra>',    
       text: otu_labels,
       mode: "markers",
       type: "scatter",
