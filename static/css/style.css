@@ -1,0 +1,25 @@
+body {
+background-color:darkslateblue;
+color: white;
+font-family: 'Times New Roman', serif;
+
+  }
+
+  .well {
+    background-color: rgb(230, 230,230);
+    color: black;
+
+  }  
+
+  .jumbotron {
+    background-image: url("../images/Navelgazing.webp");
+    background-size: cover;
+    background-color: lightcyan;
+    color: white;
+    text-align: center;
+  }  
+
+  #sample-metadata {
+    background-color: rgb(230, 230,230);
+    color: black;
+  }

@@ -100,8 +100,13 @@ function buildCharts(sample) {
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-     title: "Top 10 Bacteria Cultures Found",
-     text: otu_labels.slice(0,10).reverse()
+     title: "<b>Top 10 Bacteria Cultures Found<b>",
+     text: otu_labels.slice(0,10).reverse(),
+     plot_bgcolor: 'rgb(230, 230,230)',
+     paper_bgcolor: 'rgb(230,230,230)',
+     font: {
+       family: 'Times New Roman, serif'}
+       
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar",barData,barLayout);
@@ -126,12 +131,16 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: "Bacteria Cultures Per Sample",
+      title: "<b>Bacteria Cultures Per Sample<b>",
       xaxis: {
         title: "OTU ID"
       },
       showlegend: false,
-      hovermode:'closest'
+      hovermode:'closest',
+      plot_bgcolor: 'rgb(230, 230,230)',
+      paper_bgcolor: 'rgb(230,230,230)',
+      font: {
+        family: 'Times New Roman, serif'}
       
     };
 
@@ -145,12 +154,13 @@ function buildCharts(sample) {
       mode : "gauge+number",
       value: wfreq,
       title: {text: "<b>Belly Button Washing quency</b><br>Scrubs per Week"},
+
       gauge: {
         axis: { range: [null, 10], tickwidth: 2, tickcolor: "darkblue" },
         bar: { color: "black" },
-        bgcolor: "white",
         borderwidth: 2,
         bordercolor: "gray",
+
         steps: [
           { range: [0,2], color: "red" },
           { range: [2,4], color: "orange"},
@@ -163,9 +173,11 @@ function buildCharts(sample) {
     
     // Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 457, 
-      height: 420, 
-      margin: { t: 25, r: 25, l: 25, b: 0 }
+      plot_bgcolor: 'rgb(230, 230,230)',
+      paper_bgcolor: 'rgb(230,230,230)',
+      margin: { t: 25, r: 25, l: 25, b: 25 },
+      font: {
+        family: 'Times New Roman, serif'}
         };
 
     // Use Plotly to plot the gauge data and layout.
