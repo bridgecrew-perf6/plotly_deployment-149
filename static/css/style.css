@@ -17,6 +17,8 @@ font-family: 'Times New Roman', serif;
     background-color: lightcyan;
     color: white;
     text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }  
 
   #sample-metadata {
